@@ -1,6 +1,6 @@
 Feature('practice_form');
 
-Scenario('test something', ({ I }) => {
+Scenario('Student registration form', ({ I }) => {
 
     I.amOnPage('https://demoqa.com/automation-practice-form');
     I.see('Student Registration Form');
@@ -11,11 +11,12 @@ Scenario('test something', ({ I }) => {
     I.fillField('#userNumber', '600700600'); 
     I.clearField('#dateOfBirthInput');
     I.fillField('#dateOfBirthInput', '29 Feb 2000');
-    I.fillField('#subjects-label', 'Biomaterials');
+    I.fillField('#subjectsInput', 'Biomaterials');
     I.checkOption('Music');
     I.checkOption('Sports');
     I.attachFile('#uploadPicture', 'avatar.jpg');
-    I.wait(5);
-
-
+    I.fillField('#currentAddress', 'Polna 100');
+    I.dontSeeElement('#common_15click_overlay');
+    I.selectOption('//*[@id="react-select-3-input"]', 'NCR');
+    
 });

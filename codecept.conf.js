@@ -5,7 +5,7 @@ exports.config = {
     Playwright: {
       url: 'https://demoqa.com/',
       show: true,
-      browser: 'chromium'
+      browser: 'firefox'
     }
   },
   include: {

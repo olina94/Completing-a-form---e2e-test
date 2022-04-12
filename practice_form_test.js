@@ -11,10 +11,10 @@ Scenario('test something', ({ I }) => {
     I.fillField('#userNumber', '600700600'); 
     I.clearField('#dateOfBirthInput');
     I.fillField('#dateOfBirthInput', '29 Feb 2000');
-    
-    //I.see('Please select an item');
-    //I.click('//*[@id="item-0"]/span');
-    
+    I.fillField('#subjects-label', 'Biomaterials');
+    I.checkOption('Music');
+    I.checkOption('Sports');
+    I.attachFile('#uploadPicture', 'avatar.jpg');
     I.wait(5);
 
 

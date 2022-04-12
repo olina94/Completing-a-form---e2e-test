@@ -11,7 +11,7 @@ Scenario('test something', ({ I }) => {
     I.fillField('#lastName', 'Kowalski'); 
     I.checkOption('Male');
     //I.see('Please select an item');
-    I.click('//*[@id="item-0"]/span');
+    //I.click('//*[@id="item-0"]/span');
 
     I.wait(5);
 

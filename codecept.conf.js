@@ -5,7 +5,7 @@ exports.config = {
     Playwright: {
       url: 'https://demoqa.com/',
       show: true,
-      browser: 'firefox'
+      browser: 'chromium',
     }
   },
   include: {
@@ -15,3 +15,4 @@ exports.config = {
   mocha: {},
   name: 'PracticeForm'
 }
+

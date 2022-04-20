@@ -11,12 +11,14 @@ Scenario('Student registration form', ({ I }) => {
     I.fillField('#userNumber', '600700600'); 
     I.clearField('#dateOfBirthInput');
     I.fillField('#dateOfBirthInput', '29 Feb 2000');
+    I.pressKey("Enter");
     I.fillField('#subjectsInput', 'Biomaterials');
     I.checkOption('#hobbies-checkbox-3');
-    //I.checkOption('Sports');
+    I.checkOption('Sports');
     I.attachFile('#uploadPicture', 'avatar.jpg');
     I.fillField('#currentAddress', 'Polna 100');
-    I.dontSeeElement('#common_15click_overlay');
-    //I.click('//*[@id="react-select-3-input"]', 'NCR');
-    //I.click('')
+    I.click('#state');
+    I.click('//*[@id="state"]/div/div[1]/div[1]');
+    I.click('#city');
+    I.click('//*[@id="city"]/div/div[1]/div[2]');
 });

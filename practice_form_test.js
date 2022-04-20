@@ -8,7 +8,7 @@ Scenario('Student registration form', ({ I }) => {
     I.fillField('#lastName', 'Kowalski');   
     I.fillField('#userEmail', 'jan.kowalski@gmail.com');
     I.checkOption('Male');
-    I.fillField('#userNumber', '600700600'); 
+    I.fillField('#userNumber', '6007006000'); 
     I.clearField('#dateOfBirthInput');
     I.fillField('#dateOfBirthInput', '29 Feb 2000');
     I.pressKey("Enter");
@@ -17,8 +17,13 @@ Scenario('Student registration form', ({ I }) => {
     I.checkOption('Sports');
     I.attachFile('#uploadPicture', 'avatar.jpg');
     I.fillField('#currentAddress', 'Polna 100');
+    I.scrollPageToBottom();
     I.click('#state');
     I.click('//*[@id="state"]/div/div[1]/div[1]');
     I.click('#city');
     I.click('//*[@id="city"]/div/div[1]/div[2]');
+    I.click('//*[@id="submit"]');
+    I.see('Thanks for submitting the form');
+    I.SEE('NCR Gurgaon');
+
 });

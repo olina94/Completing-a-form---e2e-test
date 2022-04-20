@@ -15,7 +15,7 @@ Scenario('Student registration form', ({ I }) => {
     I.fillField('#subjectsInput', 'Biomaterials');
     I.checkOption('#hobbies-checkbox-3');
     I.checkOption('Sports');
-    I.attachFile('#uploadPicture', 'avatar.jpg');
+    I.attachFile('#uploadPicture', 'files/avatar.jpg');
     I.fillField('#currentAddress', 'Polna 100');
     I.scrollPageToBottom();
     I.click('#state');

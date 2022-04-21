@@ -17,13 +17,19 @@ Scenario('Student registration form', ({ I }) => {
     I.checkOption('Sports');
     I.attachFile('#uploadPicture', 'files/avatar.jpg');
     I.fillField('#currentAddress', 'Polna 100');
-    I.scrollPageToBottom();
-    I.click('#state');
-    I.click('//*[@id="state"]/div/div[1]/div[1]');
-    I.click('#city');
-    I.click('//*[@id="city"]/div/div[1]/div[2]');
-    I.click('//*[@id="submit"]');
-    I.see('Thanks for submitting the form');
-    I.SEE('NCR Gurgaon');
 
+    //I.scrollPageToBottom();
+
+    I.click('//*[@id="state"]/div/div[1]/div[1]');
+    I.click('#react-select-3-option-0');
+
+    I.click('//*[@id="city"]/div[1]/div[1]/div[1]');
+    //I.wait(2);
+    I.click('#react-select-4-option-0');
+
+    //I.click('//*[@id="submit"]');
+    //I.see('Thanks for submitting the form');
+    //I.see('NCR Noida');
+    
+    I.wait(5);
 });
